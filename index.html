@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif']
+          },
+          colors: {
+            base: "#0f172a",     // dark navy
+            accent: "#FEE715",   // kuning
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-base text-gray-100 font-sans selection:bg-accent selection:text-black">
+
+  <!-- Navbar dengan blur -->
+  <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-base/70 shadow-md z-50 transition">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <!-- Logo -->
+      <a href="#beranda">
+        <img src="images/Rizqy (2).png" alt="Rizqy Logo" class="w-32 md:w-40 object-contain hover:scale-105 transition">
+      </a>
+      <!-- Navbar -->
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#beranda" class="flex items-center space-x-2 hover:text-accent transition">
+          <i data-feather="home" class="w-5 h-5"></i><span>Beranda</span>
+        </a>
+        <a href="#skill" class="flex items-center space-x-2 hover:text-accent transition">
+          <span>&lt;/&gt;</span><span>Skill</span>
+        </a>
+        <a href="#karya" class="flex items-center space-x-2 hover:text-accent transition">
+          <i data-feather="image" class="w-5 h-5"></i><span>Karya</span>
+        </a>
+        <a href="#kontak" class="flex items-center space-x-2 hover:text-accent transition">
+          <i data-feather="mail" class="w-5 h-5"></i><span>Kontak</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Feather Icons init -->
+  <script>
+    feather.replace();
+  </script>
+
+  <!-- Main Content -->
+  <main class="pt-24">
+    
+    <!-- Beranda -->
+    <section id="beranda" class="min-h-screen flex items-center justify-center px-6 md:px-12 relative overflow-hidden">
+      <!-- Glow background -->
+      <div class="absolute -top-40 -left-40 w-80 h-80 bg-accent rounded-full blur-3xl opacity-20 animate-pulse"></div>
+      <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-accent rounded-full blur-3xl opacity-20 animate-pulse"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl relative z-10">
+        <!-- Teks -->
+        <div data-aos="fade-right">
+          <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Halo, Saya <span class="text-accent drop-shadow-md">Rizqy Kautsar Rahman</span>
+          </h2>
+          <p class="text-lg text-gray-400 mb-6">
+            Seorang <span class="text-accent font-semibold">Web & Mobile Designer</span> 
+            yang suka membuat desain interaktif & modern.
+          </p>
+          <a href="#kontak" 
+             class="bg-accent hover:shadow-lg hover:scale-105 transition text-black px-6 py-3 rounded-lg shadow-md font-semibold">
+            Hubungi Saya
+          </a>
+        </div>
+        <!-- Foto -->
+        <div class="flex justify-center" data-aos="fade-left">
+          <img src="images/Profile.jpg" 
+               alt="Foto Saya" 
+               class="rounded-2xl shadow-xl border-4 border-gray-700 w-60 md:w-96 hover:scale-105 transition">
+        </div>
+      </div>
+    </section>
+
+    <!-- Pembatas -->
+    <div class="w-3/4 mx-auto h-[2px] bg-accent opacity-60 my-12"></div>
+
+      <!-- Biodata Section -->
+  <section id="biodata" class="py-20 bg-[#111827] text-white">
+    <div class="container mx-auto px-6 md:px-12 max-w-5xl">
+      <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center text-accent" data-aos="fade-up">
+        Biodata
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+        <!-- Foto Biodata -->
+        <div class="flex justify-center" data-aos="fade-right">
+          <img src="images/pap.jpg" 
+               alt="Foto Biodata" 
+               class="rounded-2xl shadow-xl border-4 border-gray-700 w-60 md:w-80 hover:scale-105 transition">
+        </div>
+
+        <!-- Detail Biodata -->
+        <div data-aos="fade-left">
+          <ul class="space-y-4 text-lg">
+            <li><span class="font-semibold text-accent">Nama:</span> Rizqy Kautsar Rahman</li>
+            <li><span class="font-semibold text-accent">Tempat, Tanggal Lahir:</span> Medan, 29 Maret 2008</li>
+            <li><span class="font-semibold text-accent">Alamat:</span>Komplek Puri Zahara 2, Blok Q24</li>
+            <li><span class="font-semibold text-accent">Email:</span>kautsarrizqy@gmail.com</li>
+            <li><span class="font-semibold text-accent">No. HP:</span> +62 812-8897-0827</li>
+            <li><span class="font-semibold text-accent">Pendidikan:</span> SMK Telkom 1 Medan</li>
+            <li><span class="font-semibold text-accent">Hobi:</span> Main game, makan, main CDID</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Pembatas -->
+    <div class="w-3/4 mx-auto h-[2px] bg-accent opacity-60 my-12"></div>
+
+    <!-- Skill -->
+    <section id="skill" class="py-20 text-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 text-center">Skill</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+          <!-- Programming -->
+          <div class="bg-[#1a1f2a] border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="zoom-in">
+            <i class="fa-solid fa-code text-5xl text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Programming</h3>
+            <p class="text-gray-400">Menguasai bahasa pemrograman untuk membangun aplikasi dan solusi digital.</p>
+          </div>
+
+          <!-- Database -->
+          <div class="bg-[#1a1f2a] border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fa-solid fa-database text-5xl text-green-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Database Management</h3>
+            <p class="text-gray-400">Mengelola, merancang, dan mengoptimalkan database relasional maupun non-relasional.</p>
+          </div>
+
+          <!-- UI/UX -->
+          <div class="bg-[#1a1f2a] border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fa-solid fa-pen-ruler text-5xl text-pink-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">UI/UX Designer</h3>
+            <p class="text-gray-400">Merancang pengalaman pengguna yang intuitif dengan desain modern.</p>
+          </div>
+
+          <!-- Web Dev -->
+          <div class="bg-[#1a1f2a] border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fa-solid fa-globe text-5xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Web Development</h3>
+            <p class="text-gray-400">Mengembangkan website interaktif dan responsif.</p>
+          </div>
+
+          <!-- Mobile Dev -->
+          <div class="bg-[#1a1f2a] border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fa-solid fa-mobile-screen text-5xl text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Mobile Development</h3>
+            <p class="text-gray-400">Membangun aplikasi mobile cross-platform dengan performa tinggi.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Pembatas -->
+    <div class="w-3/4 mx-auto h-[2px] bg-accent opacity-60 my-12"></div>
+
+    <!-- Karya -->
+    <section id="karya" class="py-20 text-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 text-center">Karya</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+          <div class="bg-[#1a1f2a] rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="flip-left">
+            <img src="images/iPhone 16 Pro.png" alt="Karya 1" class="w-full h-48 object-contain bg-base">
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">APK Perpustakaan Edufun</h3>
+            </div>
+          </div>
+
+          <div class="bg-[#1a1f2a] rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="flip-left" data-aos-delay="150">
+            <img src="images/iPhone 15.png" alt="Karya 2" class="w-full h-48 object-contain bg-base">
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Aplikasi Timer & Stopwatch</h3>
+            </div>
+          </div>
+
+          <div class="bg-[#1a1f2a] rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:shadow-accent/30 hover:-translate-y-2 transition" data-aos="flip-left" data-aos-delay="300">
+            <img src="images/Black.png" alt="Karya 3" class="w-full h-48 object-contain bg-base">
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Design Apk Perpustakaan Digital</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Pembatas -->
+    <div class="w-3/4 mx-auto h-[2px] bg-accent opacity-60 my-12"></div>
+
+    <!-- Kontak -->
+<section id="kontak" class="relative min-h-screen flex flex-col items-center justify-center px-6 py-16 overflow-hidden">
+
+  <h2 class="text-2xl md:text-3xl font-bold mb-10 relative z-10" data-aos="fade-up">Kontak</h2>
+
+  <!-- Form -->
+  <form class="bg-[#1a1f2a]/90 backdrop-blur p-6 rounded-2xl shadow-xl border border-gray-700 w-full max-w-lg relative z-10" data-aos="fade-up" data-aos-delay="100">
+    <div class="mb-4">
+      <label class="block mb-2">Nama</label>
+      <input type="text" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent">
+    </div>
+    <div class="mb-4">
+      <label class="block mb-2">Email</label>
+      <input type="email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent">
+    </div>
+    <div class="mb-4">
+      <label class="block mb-2">Pesan</label>
+      <textarea class="w-full p-3 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+    </div>
+    <button type="submit" class="bg-gradient-to-r from-accent to-yellow-400 hover:scale-105 hover:shadow-accent/50 transition text-black px-4 py-2 rounded-lg w-full font-semibold">
+      Kirim Pesan
+    </button>
+  </form>
+
+  <!-- Sosial Media -->
+  <div class="flex flex-col md:flex-row md:space-x-10 mt-8 text-lg items-center relative z-10" data-aos="fade-up" data-aos-delay="200">
+    <a href="https://instagram.com/Kautsarrizqy" target="_blank" class="flex items-center space-x-3 mb-4 md:mb-0 hover:scale-110 transition transform hover:text-accent">
+      <i class="fa-brands fa-instagram text-pink-500 text-2xl"></i><span>@Kautsarrizqy</span>
+    </a>
+    <a href="https://www.tiktok.com/@kautsarrizqy" target="_blank" class="flex items-center space-x-3 mb-4 md:mb-0 hover:scale-110 transition transform hover:text-accent">
+      <i class="fa-brands fa-tiktok text-white text-2xl"></i><span>@Spelcaster</span>
+    </a>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6281288970827" target="_blank" 
+     class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition transform z-50">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+  </a>
+</section>
+  </main>
+
+  <!-- Smooth Scroll -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
+  <!-- AOS init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
